@@ -1,0 +1,26 @@
+$(document).ready(function (){
+
+	function createCORSRequest(method, url){
+	    var xhr = new XMLHttpRequest();
+	    if ("withCredentials" in xhr){
+	        xhr.open(method, url, true);
+	    } else if (typeof XDomainRequest != "undefined"){
+	        xhr = new XDomainRequest();
+	        xhr.open(method, url);
+	    } else {
+	        xhr = null;
+	    }
+	    return xhr;
+	}
+
+	var request = createCORSRequest("get", "http://www.imdb.com/");
+	if (request){
+	    request.onload = function() {
+	    	alert('sdf')
+	        // ...
+	    };
+	    //request.onreadystatechange = handler;
+	    request.send();
+	}
+	else {alert('not found')}
+});

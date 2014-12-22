@@ -1,0 +1,58 @@
+a:link{
+    color: teal;
+    text-decoration: none;
+}
+a:hover{
+    color: teal;
+    text-decoration: none;
+}
+a:visited {
+    color: teal;
+}
+
+.movieContent{
+    position:relative;
+    margin-left: 20%;
+    padding: 10px;
+    line-height: 28px;
+}
+.movieImage{
+    float: left;
+    margin-bottom: 20px;
+    padding-top: 10px;
+    padding-left: 10px;
+}
+.singleMovieContent{
+    border-color: cadetblue;
+    height: auto;
+    background-color: lightcyan;
+    margin-bottom: 2px;
+    border-radius: 10px;
+    border: 2px solid ;
+}
+#movieList{
+    margin-left: 100px;
+    margin-top: 50px;
+    width: 800px;
+}
+#singleMovieInfo{
+    margin-left: 100px;
+    margin-top: 50px;
+    width: 800px;
+    box-shadow: 10px 10px 5px lightcyan;
+    border-radius: 25px;
+}
+
+#upcomingMovie{
+    margin-bottom: 20px;
+}
+
+#topMovies{
+    margin-bottom: 20px;
+}
+#latestMovies{
+    margin-bottom: 20px;
+}
+#popularMovies{
+    margin-bottom: 20px;
+}

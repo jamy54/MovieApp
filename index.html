@@ -1,0 +1,76 @@
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="css/style.css" />
+<title>the title</title>
+
+   <script type="text/javascript" 
+   src="http://code.jquery.com/jquery-1.11.1.js"></script>
+   
+   <script type="text/javascript" src="js/test.js"></script>
+   <script type="text/javascript" language="javascript">
+function s(a){ alert(a);}
+/*
+	(function($) {
+	var url = 'http://www.imdb.com';
+	 
+	$.ajax({
+	   type: 'GET',
+	    url: url,
+	    async: false,
+	    jsonpCallback: 'jsonCallback',
+	    contentType: "application/json",
+	    dataType: 'jsonp',
+	    success: function(json) {
+	    	alert('dsf')
+	       //console.log(json.sites);
+	    },
+	    error: function(e) {
+	       console.log(e.message);
+	    }
+	});
+	 
+	})(jQuery);
+
+
+/*
+   $(documen<link rel="stylesheet" type="text/css" href="css/index.css" />t).ready(function() {
+
+	   var req = new XMLHttpRequest();  
+		req.open('GET', 'http://www.police.gov.bd/', false);   
+		req.send(null);  
+		console.log(req.status);
+		console.log(req.responseText);
+		if(req.status == 200)  
+		   dump(req.responseText);
+
+
+ modeLatest="movie/latest",
+ modePopular="movie/popular",
+ modeTop="movie/top_rated"
+	
+}); */
+   </script>
+</head>
+<body>
+   <div>
+	   <div>
+		   <a href="#" id="upcomingMovie">Upcoming Movies</a>
+	   </div>
+
+	   <div>
+		   <a href="#" id="topMovies">Top Rated Movies</a>
+	   </div>
+
+	   <div>
+		   <a href="#" id="latestMovies">Now Playing</a>
+	   </div>
+	   <div>
+		   <a href="#" id="popularMovies">Most Popular Movie</a>
+	   </div>
+
+	   <div id="MovieList"></div>
+	   <div id="singleMovieInfo"></div>
+
+   </div>
+</body>
+</html>
