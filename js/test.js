@@ -28,11 +28,11 @@ $(document).ready(function () {
 
                     document.getElementById("singleMovieInfo").innerHTML =
                         "<div class='singleMovieContent'>" +
-                        '<div class="movieImage"><img src=' + img.src + ' width=' + img.width / 2 + ' height=' + img.height / 2 + '></img></div>' +
+                        '<a href="'+img.src+'"><div class="movieImage"><img src='+ img.src + ' width=' + img.width / 2 + ' height=' + img.height / 2 + '></img></a></div></a>' +
                         "<div class='movieContent' style='margin-left: 35%;'>" +
-                        "<h1>" + title + "</h1>" + "<small> Rating: <em>" + obj.imdbRating + "</em> <span style='float: right'>Release:<em>" + obj.Released + "</em></span></small><br>" +
-                        plot + "<br><br><br>Genere: "+obj.Genre+"<br> Actor: " + actor + "<br>Director: "+obj.Director+
-                        "</div>" +
+                        "<h1>" + title + "</h1>" + "<small> Rating: <em>" + obj.imdbRating + "</em> <span style='float: right'>Release:<em>" + obj.Released + "</em></span></small><br><br>" +
+                        plot + "<br><br><small>Genere: <em>"+obj.Genre+"</em><br> Actor: <em>" + actor + "</em><br>Director: <em>"+obj.Director+
+                        "</em></small></div>" +
                         "<div style='clear: both'></div></div>";
                 },
                 error: function () {
@@ -49,7 +49,7 @@ $(document).ready(function () {
             url: theUrl,
             data: { get_param: 'value' },
             success: function (data) {
-                console.log(theUrl);
+                //console.log(data.page.length);
                 //console.log(data.data.length);
                 document.getElementById("MovieList").innerHTML =  "<h2>"+typeTitle+"</h2>";
                 for(i=0;i<data.results.length;i++){
@@ -87,7 +87,7 @@ $(document).ready(function () {
 
                     document.getElementById("MovieList").innerHTML +=
                         "<div class='singleMovieContent'>" +
-                            '<div class="movieImage"><img src='+img.src+' width='+img.width/4+' height='+img.height/4+'></img></div>'+
+                            '<a href="'+img.src+'"><div class="movieImage"><img src='+img.src+' width='+img.width/4+' height='+img.height/4+'></img></div></a>'+
                             "<div class='movieContent'>" +
                                 "<h1><a href='#' onclick='singleMovieInfo("+id+',"'+imagelink+imagePath+'","'+imdb_id+'","'+title+'"'+")'>"+data['title']+"</a></h1>"+
                                 data['overview']+
@@ -122,4 +122,6 @@ $(document).ready(function () {
         $("#singleMovieInfo").hide();
         upcomingMovies(web+modeTop+api,"Popoular Movies");
     });
+
+    upcomingMovies(web+modeTop+api,"Popoular Movies");
 });

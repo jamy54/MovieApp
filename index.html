@@ -1,7 +1,9 @@
 <html>
 <head>
+	<link rel="icon" href="/resource/1.ico" type="image/svg">
+	<link rel="shortcut" href="/resource/1.ico" type="image/x-icon">
 	<link rel="stylesheet" type="text/css" href="css/style.css" />
-<title>the title</title>
+<title>MovieApp</title>
 
    <script type="text/javascript" 
    src="http://code.jquery.com/jquery-1.11.1.js"></script>
@@ -53,20 +55,18 @@ function s(a){ alert(a);}
 </head>
 <body>
    <div>
-	   <div>
-		   <a href="#" id="upcomingMovie">Upcoming Movies</a>
-	   </div>
 
-	   <div>
-		   <a href="#" id="topMovies">Top Rated Movies</a>
-	   </div>
-
-	   <div>
-		   <a href="#" id="latestMovies">Now Playing</a>
-	   </div>
-	   <div>
-		   <a href="#" id="popularMovies">Most Popular Movie</a>
-	   </div>
+	   <ul>
+		   <li>
+			   Movie Menu
+			   <ul>
+				   <li id="upcomingMovie">Upcoming Movies</li>
+				   <li id="topMovies">Top Rated Movies</li>
+				   <li id="latestMovies">Now Playing Movies</li>
+				   <li id="popularMovies">Popular Movies</li>
+			   </ul>
+		   </li>
+	   </ul>
 
 	   <div id="MovieList"></div>
 	   <div id="singleMovieInfo"></div>
